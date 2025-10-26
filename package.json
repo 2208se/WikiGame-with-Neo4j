@@ -1,0 +1,10 @@
+{
+  "name": "wikigame",
+  "type": "module",
+  "dependencies": {
+    "neo4j-driver": "^5.20.0"
+  },
+  "scripts": {
+    "start": "node wikigame.js"
+  }
+}

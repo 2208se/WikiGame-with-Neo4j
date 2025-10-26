@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiGame - The Wikipedia Path Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🎮 WikiGame</h1>
+            <p class="subtitle">Trouvez le chemin le plus court entre pages Wikipedia</p>
+        </header>
+
+        <div class="game-container">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="startPage">Page de départ</label>
+                    <input type="text" id="startPage" placeholder="Ex: Algorithmique" class="input-field">
+                </div>
+                
+                <div class="swap-btn" id="swapBtn">⇅</div>
+                
+                <div class="input-group">
+                    <label for="endPage">Page d'arrivée</label>
+                    <input type="text" id="endPage" placeholder="Ex: Machine de Turing" class="input-field">
+                </div>
+                
+                <button id="findPath" class="primary-btn">Trouver le chemin</button>
+            </div>
+
+            <div class="search-section">
+                <div class="input-group">
+                    <label for="searchKeyword">Rechercher des pages</label>
+                    <input type="text" id="searchKeyword" placeholder="Ex: math, programmation..." class="input-field">
+                </div>
+                <button id="searchBtn" class="secondary-btn">Rechercher</button>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Recherche du chemin optimal...</p>
+            </div>
+
+            <div id="results" class="results hidden">
+                <h3 id="resultsTitle"></h3>
+                <div id="pathContainer" class="path-container"></div>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+
+            <div id="error" class="error hidden">
+                <h3>❌ Oups !</h3>
+                <p id="errorMessage"></p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>📊 Statistiques</h3>
+                <div id="statsContent">
+                    <p>Chargement des données...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
